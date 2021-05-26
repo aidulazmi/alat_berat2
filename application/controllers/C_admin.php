@@ -7,4 +7,12 @@ class C_admin extends CI_Controller {
 	{
 		$this->load->view('admin/login/V_login');
 	}
+	
+	public function dashboard()
+	{
+		$this->load->view('admin/admin/inc/head');
+		$this->load->view('admin/admin/inc/sidebar');
+		$this->load->view('admin/admin/inc/footer');
+	}
+
 }
