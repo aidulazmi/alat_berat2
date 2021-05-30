@@ -65,7 +65,7 @@
           <img src="<?=base_url();?>/asset/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"></a>
+          <a href="#" class="d-block"><?php echo $this->session->userdata('username')?></a>
         </div>
       </div>
       <!-- Sidebar Menu -->
@@ -73,7 +73,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">Data Master</li>
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/index')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Dashboard
@@ -81,37 +81,37 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/informasi_client')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-list"></i>
               <p>
-                Kategori
+                Informasi Client
               </p>
             </a>
           </li>
           
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/penawaran')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-handshake"></i>
               <p>
-                Spare Part
+                Penawaran
               </p>
             </a>
           </li>
           
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/jasa')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-weight-hanging"></i>
               <p>
-                Alat Berat
+                Layanan Jasa
               </p>
             </a>
           </li>
           
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/v_order')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-tools"></i>
               <p>
-                Detail Alat Berat
+                Verifikasi Order
               </p>
             </a>
           </li>
@@ -119,7 +119,7 @@
             <a href="#" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-hands-helping"></i>
               <p>
-                Izin Alat Berat
+                Local Work Order
               </p>
             </a>
           </li>
@@ -127,7 +127,7 @@
             <a href="#" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-toolbox"></i>
               <p>
-                Pemeriksaan
+                Monitoring
               </p>
             </a>
           </li>
@@ -135,7 +135,7 @@
             <a href="#" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-toolbox"></i>
               <p>
-                Pelaksanaan Perbaikan
+                Data Mekanik
               </p>
             </a>
           </li>
@@ -147,7 +147,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('c_login/logout')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>Logout</p>
             </a>
