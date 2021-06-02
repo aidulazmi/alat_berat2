@@ -89,13 +89,13 @@
         <div class="modal-dialog">
           <div class="modal-content bg-primary">
             <div class="modal-header">
-              <h4 class="modal-title">Tambah Data Client</h4>
+              <h4 class="modal-title">Layanan Jasa</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form action="<?php echo site_url('C_admin/simpan_jasa')?>" method="POST">
+            <form enctype="multipart/form-data" action="<?php echo site_url('C_admin/simpan_jasa')?>" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Layanan Jasa</label>
@@ -106,7 +106,20 @@
                     <label for="exampleInputEmail1">Harga</label>
                     <input type="text" onkeyup="sum();" onkeypress="return event.charCode >= 48 && event.charCode <=57" class="form-control" id="exampleInputEmail1" placeholder="Harga" name="harga" required>
                   </div>
-                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Gambar Jasa</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" name="foto" class="custom-file-input" id="exampleInputFile" onchange="readURL(this);">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="text-center">
+                            <img id="blah" class="profile-user-img img-fluid img-circle"
+                                 src="<?=base_url();?>/asset/admin/avatar(1).png"
+                                 alt="your image">
+                      </div>
+                    </div>
+                  </div>
                 <!-- /.card-body -->
             </div>
             <div class="modal-footer justify-content-between">
@@ -121,3 +134,18 @@
         <!-- /.modal-dialog -->
     </div>
       <!-- /.modal -->
+
+          <script type="text/javascript">
+       function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>

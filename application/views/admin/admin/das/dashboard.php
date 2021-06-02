@@ -39,7 +39,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-handshake"></i>
               </div>
-              <a href="<?php echo site_url('C_admin/data_superpart')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo site_url('C_admin/informasi_client')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           
@@ -59,7 +59,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-weight-hanging"></i>
               </div>
-              <a href="<?php echo site_url('C_admin/data_alat_berat')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo site_url('C_admin/penawaran')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           
@@ -79,7 +79,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-tools"></i>
               </div>
-              <a href="<?php echo site_url('C_admin/data_detail_alat_berat')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo site_url('C_admin/jasa')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           
@@ -99,7 +99,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-hands-helping"></i>
               </div>
-              <a href="<?php echo site_url('C_admin/data_izin_alat_berat')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo site_url('C_admin/v_order')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           
@@ -108,7 +108,7 @@
             <div class="small-box bg-secondary">
               <div class="inner">
                 <?php
-                    $jumlah = $this->db->query("SELECT count(*) as jumlah_data FROM order_jasa")->result();
+                    $jumlah = $this->db->query("SELECT count(*) as jumlah_data FROM lwo")->result();
                     foreach ($jumlah as $jow) {
                     echo "<h3>$jow->jumlah_data</h3>";                
                     }
@@ -119,7 +119,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-toolbox"></i>
               </div>
-              <a href="<?php echo site_url('C_admin/data_pemeriksaan')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo site_url('C_admin/lwo')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           
@@ -139,7 +139,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-toolbox"></i>
               </div>
-              <a href="<?php echo site_url('C_admin/data_pelaksanaan_perbaikan')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo site_url('C_admin/monitoring')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
@@ -159,7 +159,7 @@
               <div class="icon">
                 <i class="nav-icon fas fa-list"></i>
               </div>
-              <a href="<?php echo site_url('C_admin/data_kategori')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo site_url('C_admin/mekanik')?>" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 

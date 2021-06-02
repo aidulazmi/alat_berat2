@@ -144,7 +144,18 @@
                             ?>
                         </select>
                   </div>
-
+                  <div class="form-group">
+                        <label>ID Jasa</label>
+                        <select class="form-control" name="id_jasa" id="id_kategori">
+                          <option value="" selected>Silahkan Isi ID Jasa berdasarkan Layanan Jasa</option>
+                            <?php                                
+                              foreach ($user3 as $row) {  
+                              echo "<option value='".$row->id_jasa."'>".$row->layanan_jasa."</option>";
+                              }
+                            ?>
+                        </select>
+                  </div>
+                  
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tanggal</label>
                     <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Tanggal" name="tanggal" required>

@@ -36,7 +36,7 @@
 
               <?php foreach($user as $u){ ?>
               
-              <form action="<?php echo site_url('c_admin/update_data_jasa')?>" method="post">
+              <form enctype="multipart/form-data" action="<?php echo site_url('c_admin/update_data_jasa')?>" method="post">
 
                 <div class="card-body">
                   <div class="form-group">
@@ -52,6 +52,20 @@
                     <label for="exampleInputEmail1">Harga</label>
                     <input type="text" class="form-control" value="<?php echo $u->harga ?>" id="exampleInputEmail1" placeholder="Harga" name="harga" required>
                   </div>
+
+                  <div class="form-group row">
+                        <label for="inputSkills" class="col-sm-2 col-form-label">Foto Jasa</label>
+                        <div class="col-sm-10">
+                          <input type="file" name="foto" value="<?php echo $u->foto ?>" class="form-control" id="exampleInputFile" onchange="readURL(this);" >
+                          <?php if($u->foto == ""){
+                            echo '<input type="text" name="foto">';
+                          }else{
+                            echo '<input type="text" name="foto" value="'.$u->foto.'">';
+                          }?>
+                          
+                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        </div>
+                      </div>
 
                 </div>
                 <!-- /.card-body -->

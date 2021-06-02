@@ -16,28 +16,48 @@
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
-          <span class='badge badge-danger navbar-badge'>Jumlah Data</span>
+           <?php
+          $jumlah = $this->db->query("SELECT count(*) as jumlah_data FROM v_order")->result();
+          foreach ($jumlah as $jow) {
+                    echo "<span class='badge badge-danger navbar-badge'>$jow->jumlah_data</span>";                
+                    }
+                ?>
         </a>
 
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class='dropdown-item dropdown-header'>Jumlah Data Pemeriksaan</span>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> Proses
-            <span class='float-right text-muted text-sm'>Jumlah Data Orang</span>
+            <i class="fas fa-envelope mr-2"></i> Verifikasi Pending
+            <?php
+          $jumlah = $this->db->query("SELECT count(*) as jumlah_data FROM v_order where status_verifikasi ='1'")->result();
+          foreach ($jumlah as $jow) {
+                    if ($jow == "0"){
+                      echo "<span class='float-right text-muted text-sm'>Tidak Ada Masa Tenggang</span>";
+                    }else{
+                      echo "<span class='float-right text-muted text-sm'>$jow->jumlah_data Orang</span>";   
+                    }
+                                 
+                    }
+                ?>
           </a>
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> Belum Siap
-            <span class='float-right text-muted text-sm'>Jumlah Data Orang</span>
+            <i class="fas fa-users mr-2"></i> Pekerjaan Pending
+           <?php
+          $jumlah = $this->db->query("SELECT count(*) as jumlah_data FROM v_order where status_pekerjaan ='1'")->result();
+          foreach ($jumlah as $jow) {
+                    if ($jow == "0"){
+                      echo "<span class='float-right text-muted text-sm'>Tidak Ada Masa Tenggang</span>";
+                    }else{
+                      echo "<span class='float-right text-muted text-sm'>$jow->jumlah_data Orang</span>";   
+                    }
+                                 
+                    }
+                ?>
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> Sudah Siap
-            <span class='float-right text-muted text-sm'>Jumlah Data Orang</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="<?php echo site_url('C_admin/data_pemeriksaan')?>" class="dropdown-item dropdown-footer">Semua Masa Tempo</a>
+          <a href="<?php echo site_url('C_admin/v_order')?>" class="dropdown-item dropdown-footer">Semua Masa Tempo</a>
         </div>
       </li>
       <li class="nav-item">
@@ -116,7 +136,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/lwo')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-hands-helping"></i>
               <p>
                 Local Work Order
@@ -124,7 +144,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/monitoring')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-toolbox"></i>
               <p>
                 Monitoring
@@ -132,7 +152,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/mekanik')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-toolbox"></i>
               <p>
                 Data Mekanik
@@ -141,7 +161,7 @@
           </li>
           <li class="nav-header">Control</li>
           <li class="nav-item">
-            <a href="#" class="nav-link js-scroll-trigger">
+            <a href="<?php echo site_url('C_admin/user')?>" class="nav-link js-scroll-trigger">
                <i class="nav-icon fas fa-user"></i>
               <p>User</p>
             </a>

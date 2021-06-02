@@ -18,6 +18,8 @@ class C_login extends CI_Controller {
                             redirect('C_admin');
                         }elseif($this->session->userdata("status") == "teknisi"){
                             redirect('C_teknisi');
+                        }elseif($this->session->userdata("status") == "pimpinan"){
+                            redirect('C_pimpinan');
                         }else{
                            $data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
                         <div class="header"><b><i class="fa fa-exclamation-circle"></i> ERROR</b> username atau password salah!</div></div>';
@@ -66,6 +68,8 @@ class C_login extends CI_Controller {
                             redirect('C_admin');
                         }elseif($this->session->userdata("status") == "teknisi"){
                             redirect('C_teknisi');
+                        }elseif($this->session->userdata("status") == "pimpinan"){
+                            redirect('C_pimpinan');
                         }else{
                            $data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
                         <div class="header"><b><i class="fa fa-exclamation-circle"></i> ERROR</b> username atau password salah!</div></div>';

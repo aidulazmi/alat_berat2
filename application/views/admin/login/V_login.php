@@ -48,8 +48,7 @@
 						</div>
 						<div class="bottom-content">
 							<form action="#" method="post">
-								<input type="text" name="username" class="input-form" placeholder="Username"
-										required="required" />
+								<input type="text" name="username" class="input-form" placeholder="Username" required="required" />
 								<input type="password" name="password" class="input-form"
 										placeholder="Password" required="required" />
 								<button type="submit" class="loginhny-btn btn">Login</button>
