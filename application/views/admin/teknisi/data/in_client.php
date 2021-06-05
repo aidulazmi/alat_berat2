@@ -37,7 +37,6 @@
                     <th>No Telpon</th>
                     <th>Email</th>
                     <th>Verifikasi</th>
-                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -61,7 +60,7 @@
                           echo '<span class="badge badge-danger">Belum Ada Status</span>';
                         }
                       ?></td>
-                    <td>
+                    <!-- <td>
                       <a class="btn btn-info btn-sm" href="<?php echo site_url('C_teknisi/edit_client/'.$u->id_client);?>">
                               <i class="fas fa-pencil-alt">
                               </i>
@@ -74,7 +73,7 @@
                       </a>
                     
                       
-                    </td>
+                    </td> -->
                   </tr>
                   <?php } ?>
                   </tbody>
@@ -86,7 +85,6 @@
                     <th>No Telpon</th>
                     <th>Email</th>
                     <th>Verifikasi</th>
-                    <th>Action</th>
                   </tr>
                   </tfoot>
                 </table>

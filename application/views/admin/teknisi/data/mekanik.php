@@ -38,7 +38,6 @@
                     <th>Alamat</th>
                     <th>Email</th>
                     <th>Status</th>
-                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -63,7 +62,7 @@
                           echo '<span class="badge badge-danger">Belum Ada Status</span>';
                         }
                       ?></td>
-                    <td>
+                   <!--  <td>
                       <a class="btn btn-info btn-sm" href="<?php echo site_url('C_teknisi/edit_mekanik/'.$u->id_mekanik);?>">
                               <i class="fas fa-pencil-alt">
                               </i>
@@ -75,7 +74,7 @@
                               Hapus
                       </a>
                      
-                    </td>
+                    </td> -->
                   </tr>
                   <?php } ?>
                   </tbody>
@@ -88,7 +87,6 @@
                     <th>Alamat</th>
                     <th>Email</th>
                     <th>Status</th>
-                    <th>Action</th>
                   </tr>
                   </tfoot>
                 </table>

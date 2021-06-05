@@ -108,41 +108,6 @@
               </p>
             </a>
           </li>
-          
-          <li class="nav-item">
-            <a href="<?php echo site_url('C_teknisi/penawaran')?>" class="nav-link js-scroll-trigger">
-              <i class="nav-icon fas fa-handshake"></i>
-              <p>
-                Penawaran
-              </p>
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="<?php echo site_url('C_teknisi/jasa')?>" class="nav-link js-scroll-trigger">
-              <i class="nav-icon fas fa-weight-hanging"></i>
-              <p>
-                Layanan Jasa
-              </p>
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="<?php echo site_url('C_teknisi/v_order')?>" class="nav-link js-scroll-trigger">
-              <i class="nav-icon fas fa-tools"></i>
-              <p>
-                Verifikasi Order
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo site_url('C_teknisi/lwo')?>" class="nav-link js-scroll-trigger">
-              <i class="nav-icon fas fa-hands-helping"></i>
-              <p>
-                Local Work Order
-              </p>
-            </a>
-          </li>
           <li class="nav-item">
             <a href="<?php echo site_url('C_teknisi/monitoring')?>" class="nav-link js-scroll-trigger">
               <i class="nav-icon fas fa-toolbox"></i>
