@@ -42,7 +42,7 @@
                   <tr>
                     <td><?php echo $u->id_jasa ?></td>
                     <td><?php echo $u->layanan_jasa ?></td>
-                    <td><?php echo $u->harga ?></td>
+                    <td>Rp. <?php echo $u->harga ?></td>
                     
                     <td>
                      <a class="btn btn-info btn-sm" href="<?php echo site_url('C_admin/edit_jasa/'.$u->id_jasa);?>">
@@ -103,7 +103,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Harga</label>
+                    <label for="exampleInputEmail1">Harga (Rp.)</label>
                     <input type="text" onkeyup="sum();" onkeypress="return event.charCode >= 48 && event.charCode <=57" class="form-control" id="exampleInputEmail1" placeholder="Harga" name="harga" required>
                   </div>
                 <div class="form-group">

@@ -147,7 +147,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Harga</label>
+                    <label for="exampleInputEmail1">Harga(Rp.)</label>
                     <input type="text" class="form-control" value="<?php echo $u->harga ?>" id="exampleInputEmail1" readonly placeholder="Harga" name="harga" required>
                   </div>
 

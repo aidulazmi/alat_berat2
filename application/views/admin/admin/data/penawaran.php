@@ -51,8 +51,8 @@
                     <td><?php echo $u->keterangan ?></td>
                     <td><?php echo $u->qty ?></td>
                     <td><?php echo $u->unit ?></td>
-                    <td><?php echo $u->biaya ?></td>
-                    <td><?php echo $u->jumlah ?></td>
+                    <td>Rp. <?php echo $u->biaya ?></td>
+                    <td>Rp. <?php echo $u->jumlah ?></td>
                     <td>
                       <a class="btn btn-info btn-sm" href="<?php echo site_url('C_admin/edit_penawaran/'.$u->id_penawaran);?>">
                               <i class="fas fa-pencil-alt">
@@ -142,11 +142,11 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Harga</label>
+                    <label for="exampleInputEmail1">Harga (Rp.)</label>
                     <input type="text" class="form-control" id="harga1" onkeyup="sum();" placeholder="biaya" onkeypress="return event.charCode >= 48 && event.charCode <=57" name="biaya" required>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Jumlah</label>
+                    <label for="exampleInputEmail1">Jumlah(Rp.)</label>
                     <input type="text" class="form-control" id="jumlah1" placeholder="Jumlah" name="jumlah" readonly>
                   </div>
                   

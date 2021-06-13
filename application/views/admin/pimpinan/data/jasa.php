@@ -42,7 +42,7 @@
                   <tr>
                     <td><?php echo $u->id_jasa ?></td>
                     <td><?php echo $u->layanan_jasa ?></td>
-                    <td><?php echo $u->harga ?></td>
+                    <td>Rp. <?php echo $u->harga ?></td>
                     
                     <!-- <td>
                      <a class="btn btn-info btn-sm" href="<?php echo site_url('C_pimpinan/edit_jasa/'.$u->id_jasa);?>">

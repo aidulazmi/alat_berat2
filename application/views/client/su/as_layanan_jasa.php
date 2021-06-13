@@ -130,12 +130,12 @@
                     <a href="<?=base_url()?>uploads/jasa/<?=$u->foto;?>" data-toggle="lightbox" data-title="Layanan Jasa" data-gallery="gallery">
                       <img src="<?=base_url()?>uploads/jasa/<?=$u->foto;?>" class="img-fluid mb-2" alt="white sample"/>
                       <h6><?php echo $u->layanan_jasa ?></h6>
-                      <h6><?php echo $u->harga ?></h6>
+                      <h6>Rp. <?php echo $u->harga ?></h6>
                     </a>
                     <a class="btn btn-info btn-sm" href="<?php echo site_url('C_client/edit_jasa/'.$u->id_jasa);?>">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Ubah
+                              Order
                       </a>
                   </div>
                   <?php } ?>

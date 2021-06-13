@@ -51,8 +51,8 @@
                     <td><?php echo $u->keterangan ?></td>
                     <td><?php echo $u->qty ?></td>
                     <td><?php echo $u->unit ?></td>
-                    <td><?php echo $u->biaya ?></td>
-                    <td><?php echo $u->jumlah ?></td>
+                    <td>Rp. <?php echo $u->biaya ?></td>
+                    <td>Rp. <?php echo $u->jumlah ?></td>
                     <!-- <td>
                       <a class="btn btn-info btn-sm" href="<?php echo site_url('C_pimpinan/edit_penawaran/'.$u->id_penawaran);?>">
                               <i class="fas fa-pencil-alt">

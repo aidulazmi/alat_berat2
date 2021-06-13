@@ -74,11 +74,11 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Harga</label>
+                    <label for="exampleInputEmail1">Harga (Rp.)</label>
                     <input type="text"  value="<?php echo $u->biaya ?>" class="form-control" id="harga1" onkeyup="sum();" placeholder="biaya" onkeypress="return event.charCode >= 48 && event.charCode <=57" name="biaya" required>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Jumlah</label>
+                    <label for="exampleInputEmail1">Jumlah (Rp.)</label>
                     <input type="text" value="<?php echo $u->jumlah ?>" class="form-control" id="jumlah1" placeholder="Jumlah" name="jumlah" readonly>
                   </div>
                   
