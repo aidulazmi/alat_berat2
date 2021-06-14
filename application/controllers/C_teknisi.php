@@ -1009,7 +1009,7 @@ function profil_ubah2(){
  		'id_jasa' => $id_jasa
  	);
 
- 	$this->M_admin->update_data_jasa($where,$data,'jasa');
+ 	$this->M_teknisi->update_data_jasa($where,$data,'jasa');
  		redirect('C_teknisi/jasa');
  	}
 
@@ -1141,6 +1141,57 @@ function update_data_user(){
 	}
 }
 
+//cetak
 
+	public function informasi_client_cetak()
+	{
+		if($this->M_login->logged_id2() == 'teknisi')
+	{
+		$data['user'] = $this->M_teknisi->tampil_data_client()->result();
+		$this->load->view('admin/cetak/V_C_client',$data);
+
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+
+	public function monitoring_cetak()
+	{
+		if($this->M_login->logged_id2() == 'teknisi')
+	{
+		$data['user'] = $this->M_teknisi->tampil_data_monitoring()->result();
+		$data['user2'] = $this->M_teknisi->tampil_data_lwo()->result();
+$this->load->view('admin/cetak/V_C_monitoring',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+
+		public function mekanik_cetak()
+	{
+		if($this->M_login->logged_id2() == 'teknisi')
+	{
+		$data['user'] = $this->M_teknisi->tampil_data_mekanik()->result();
+		$data['user2'] = $this->M_teknisi->tampil_data_lwo()->result();
+$this->load->view('admin/cetak/V_C_mekanik',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
 
 }

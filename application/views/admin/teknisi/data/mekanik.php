@@ -26,6 +26,9 @@
                     Tambah Data Mekanik</button>
               </div>
               <!-- /.card-header -->
+              <a href="<?php echo site_url('C_teknisi/mekanik_cetak')?>" target="_blank" class="btn btn-app bg-success" >
+                  <i class="fas fa-print"></i> Cetak Laporan
+                </a>
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>

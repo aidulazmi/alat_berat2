@@ -1008,7 +1008,7 @@ function profil_ubah2(){
  		'id_jasa' => $id_jasa
  	);
 
- 	$this->M_admin->update_data_jasa($where,$data,'jasa');
+ 	$this->M_pimpinan->update_data_jasa($where,$data,'jasa');
  		redirect('C_pimpinan/jasa');
  	}
 
@@ -1141,5 +1141,138 @@ function update_data_user(){
 }
 
 
+	//cetak
+
+	public function informasi_client_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_client()->result();
+		$this->load->view('admin/cetak/V_C_client',$data);
+
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+	public function penawaran_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_penawaran()->result();
+		$data['user2'] = $this->M_pimpinan->tampil_data_client()->result();
+		$this->load->view('admin/cetak/V_C_penawaran',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+
+public function jasa_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_jasa()->result();
+$this->load->view('admin/cetak/V_C_jasa',$data);
+
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+
+public function v_order_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_v_order()->result();
+		$data['user2'] = $this->M_pimpinan->tampil_data_client()->result();
+		$data['user3'] = $this->M_pimpinan->tampil_data_jasa()->result();
+			$this->load->view('admin/cetak/V_C_order',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+public function lwo_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_lwo()->result();
+		$data['user2'] = $this->M_pimpinan->tampil_data_client()->result();
+		$this->load->view('admin/cetak/V_C_lwo',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+	public function monitoring_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_monitoring()->result();
+		$data['user2'] = $this->M_pimpinan->tampil_data_lwo()->result();
+$this->load->view('admin/cetak/V_C_monitoring',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+
+	public function mekanik_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_mekanik()->result();
+		$data['user2'] = $this->M_pimpinan->tampil_data_lwo()->result();
+$this->load->view('admin/cetak/V_C_mekanik',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
+	public function user_cetak()
+	{
+		if($this->M_login->logged_id2() == 'pimpinan')
+	{
+		$data['user'] = $this->M_pimpinan->tampil_data_user();
+		$this->load->view('admin/cetak/V_C_user',$data);
+	}
+	else
+	{
+		redirect("C_login");
+
+	}
+
+
+	}
 
 }
